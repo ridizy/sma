@@ -2,7 +2,6 @@ FROM jrottenberg/ffmpeg:snapshot-vaapi
 LABEL maintainer="ridizy <ridizy@gmail.com>"
 
 ENV SMA_PATH /usr/local/sma
-ENV SMA_RS Radarr
 ENV SMA_UPDATE false
 
 # get python3 and git, and install python libraries
@@ -50,4 +49,4 @@ VOLUME /usr/local/sma/config
 COPY extras/ ${SMA_PATH}/
 COPY root/ /
 
-CMD ["sh"]
+CMD ["/usr/bin/bash"]
