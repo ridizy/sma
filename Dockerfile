@@ -1,7 +1,5 @@
 ARG ffmpeg_tag=4.2-ubuntu
-ARG radarr_tag=latest
 FROM jrottenberg/ffmpeg:${ffmpeg_tag} as ffmpeg
-FROM linuxserver/radarr:${radarr_tag}
 LABEL maintainer="mdhiggins <mdhiggins23@gmail.com>"
 
 # Add files from ffmpeg
@@ -48,8 +46,6 @@ RUN \
     /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/*
-
-EXPOSE 7878
 
 VOLUME /config
 VOLUME /usr/local/sma/config
