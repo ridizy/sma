@@ -1,9 +1,6 @@
 FROM jrottenberg/ffmpeg:snapshot-vaapi
 LABEL maintainer="ridizy <ridizy@gmail.com>"
 
-# Add files from ffmpeg
-COPY /usr/local/ /usr/local/
-
 ENV SMA_PATH /usr/local/sma
 ENV SMA_RS Radarr
 ENV SMA_UPDATE false
@@ -52,3 +49,5 @@ VOLUME /usr/local/sma/config
 # update.py sets FFMPEG/FFPROBE paths, updates API key and Sonarr/Radarr settings in autoProcess.ini
 COPY extras/ ${SMA_PATH}/
 COPY root/ /
+
+CMD ["/bin/bash"]
