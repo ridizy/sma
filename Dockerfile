@@ -49,4 +49,4 @@ VOLUME /usr/local/sma/config
 COPY extras/ ${SMA_PATH}/
 COPY root/ /
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/usr/local/sma/venv/bin/python", "/usr/local/sma/manual.py"]
