@@ -50,4 +50,4 @@ VOLUME /usr/local/sma/config
 COPY extras/ ${SMA_PATH}/
 COPY root/ /
 
-CMD ["/bin/bash"]
+CMD ["bash"]
