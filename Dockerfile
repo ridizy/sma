@@ -1,6 +1,5 @@
-ARG ffmpeg_tag=4.2-ubuntu
-FROM jrottenberg/ffmpeg:${ffmpeg_tag} as ffmpeg
-LABEL maintainer="mdhiggins <mdhiggins23@gmail.com>"
+FROM jrottenberg/ffmpeg:snapshot-vaapi as ffmpeg
+LABEL maintainer="ridizy <ridizy@gmail.com>"
 
 # Add files from ffmpeg
 COPY --from=ffmpeg /usr/local/ /usr/local/
