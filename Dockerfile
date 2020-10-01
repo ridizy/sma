@@ -2,7 +2,7 @@ FROM jrottenberg/ffmpeg:snapshot-vaapi as ffmpeg
 LABEL maintainer="ridizy <ridizy@gmail.com>"
 
 # Add files from ffmpeg
-COPY --from=ffmpeg /usr/local/ /usr/local/
+#COPY --from=ffmpeg /usr/local/ /usr/local/
 
 ENV SMA_PATH /usr/local/sma
 ENV SMA_RS Radarr
